@@ -4,6 +4,7 @@ import com.mycompany.testetotem5.Controller.NavegacaoController;
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.Cursor;
 
 public class Tela1Inicio extends javax.swing.JDialog
 {
@@ -26,13 +27,13 @@ public class Tela1Inicio extends javax.swing.JDialog
     }
     
     private void configurarCliqueNaLogo(){
-        logo.addMouseListener(new MouseAdapter(){
+        lbl_logoMars.addMouseListener(new MouseAdapter(){
             @Override
             public void mouseClicked(MouseEvent e){
                 NavegacaoController.trocarTela(Tela1Inicio.this, new Tela2EscolhaRobos());
             }
         });
-        logo.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        lbl_logoMars.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }
 
     /**
