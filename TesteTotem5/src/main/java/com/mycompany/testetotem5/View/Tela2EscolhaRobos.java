@@ -29,6 +29,7 @@ public class Tela2EscolhaRobos extends javax.swing.JDialog
     public Tela2EscolhaRobos(){
         super(new javax.swing.JFrame(), false);
         initComponents();
+        configurarBotoes();
     }
 
     /**

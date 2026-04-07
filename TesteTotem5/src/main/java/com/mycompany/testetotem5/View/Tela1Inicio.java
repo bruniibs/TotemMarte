@@ -22,6 +22,7 @@ public class Tela1Inicio extends javax.swing.JDialog
     public Tela1Inicio(){
         super(new javax.swing.JFrame(), false);
         initComponents();
+        configurarCliqueNaLogo();
     }
     
     private void configurarCliqueNaLogo(){
