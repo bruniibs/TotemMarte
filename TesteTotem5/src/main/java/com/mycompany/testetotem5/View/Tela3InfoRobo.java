@@ -38,10 +38,10 @@ public class Tela3InfoRobo extends javax.swing.JDialog
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_voltar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtInfoRobo = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
+        lbl_ImgRobo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -52,8 +52,8 @@ public class Tela3InfoRobo extends javax.swing.JDialog
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel1.setText("NOME ROBO");
 
-        jButton1.setText("Voltar");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        btn_voltar.setText("Voltar");
+        btn_voltar.addActionListener(this::btn_voltarActionPerformed);
 
         txtInfoRobo.setEditable(false);
         txtInfoRobo.setBackground(new java.awt.Color(102, 0, 0));
@@ -66,8 +66,8 @@ public class Tela3InfoRobo extends javax.swing.JDialog
         txtInfoRobo.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txtInfoRobo);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/robozinhoInho.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        lbl_ImgRobo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/robozinhoInho.png"))); // NOI18N
+        lbl_ImgRobo.setText("jLabel2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -78,20 +78,20 @@ public class Tela3InfoRobo extends javax.swing.JDialog
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(btn_voltar)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_ImgRobo, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(44, 44, 44))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(46, 46, 46)
-                .addComponent(jButton1)
+                .addComponent(btn_voltar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,7 +101,7 @@ public class Tela3InfoRobo extends javax.swing.JDialog
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_ImgRobo, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(158, 158, 158))))
         );
 
@@ -125,37 +125,52 @@ public class Tela3InfoRobo extends javax.swing.JDialog
 
     private void carregarInformacoesDoRobo(){
         // vai mudar a imagem de acordo com o id do robo
-        
-        if (idRobo == 1){
-            //muda a imagem para robo1.png
-            imagemRobo.setIcon(new ImageIcon("src/Images/robozinhoInho.png"));
-            textInfo.setText("Informações do robo numero um....");
-        } else if (idRobo == 2){
-            imagemRobo.setIcon(new ImageIcon("src/Images/robozinhoInho.png"));
-            textInfo.setText("Informações do robo numero dois....");
-        } else if (idRobo == 3){
-            imagemRobo.setIcon(new ImageIcon("src/Images/robozinhoInho.png"));
-            textInfo.setText("Informações do robo numero tres....");
-        } else if (idRobo == 4){
-            imagemRobo.setIcon(new ImageIcon("src/Images/robozinhoInho.png"));
-            textInfo.setText("Informações do robo numero quatro....");
+        switch (idRobo)
+        {
+            case 1:
+                //muda a imagem para robo1.png
+                lbl_ImgRobo.setIcon(new ImageIcon("src/Images/robozinhoInho.png"));
+                txtInfoRobo.setText(
+                        "Informações do robo numero um...."
+                        );
+                break;
+            case 2:
+                lbl_ImgRobo.setIcon(new ImageIcon("src/Images/robozinhoInho.png"));
+                txtInfoRobo.setText(
+                        "Informações do robo numero dois...."
+                        );
+                break;
+            case 3:
+                lbl_ImgRobo.setIcon(new ImageIcon("src/Images/robozinhoInho.png"));
+                txtInfoRobo.setText(
+                        "Informações do robo numero tres...."
+                        );
+                break;
+            case 4:
+                lbl_ImgRobo.setIcon(new ImageIcon("src/Images/robozinhoInho.png"));
+                txtInfoRobo.setText(
+                        "Informações do robo numero quatro...."
+                        );
+                break;
+            default:
+                break;
         }
     }
     
     private void configurarBotoes(){
-        btnVoltar.addActionListener(e -> {
+        btn_voltar.addActionListener(e -> {
             NavegacaoController.trocarTela(Tela3InfoRobo.this, new Tela2EscolhaRobos());
         });
         
-        btnVotacao.addActionListener(e -> {
+        btn_votacao.addActionListener(e -> { //preciso colocar o botao desse
            NavegacaoController.trocarTela(Tela3InfoRobo.this, new Tela4Votacao());
         });
     }
     
     
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_voltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,11 +216,11 @@ public class Tela3InfoRobo extends javax.swing.JDialog
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_voltar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbl_ImgRobo;
     private javax.swing.JTextArea txtInfoRobo;
     // End of variables declaration//GEN-END:variables
 }

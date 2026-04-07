@@ -51,7 +51,7 @@ public class Tela2EscolhaRobos extends javax.swing.JDialog
         btnRobo2 = new javax.swing.JButton();
         btnRobo3 = new javax.swing.JButton();
         btnRobo4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btn_votacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1280, 720));
@@ -86,8 +86,8 @@ public class Tela2EscolhaRobos extends javax.swing.JDialog
 
         btnRobo4.setText("Robo 4");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jButton1.setText("Acabei minha Exploração");
+        btn_votacao.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        btn_votacao.setText("Acabei minha Exploração");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,7 +96,7 @@ public class Tela2EscolhaRobos extends javax.swing.JDialog
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(322, 322, 322)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jButton1)
+                    .addComponent(btn_votacao)
                     .addComponent(jLabel1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -136,7 +136,7 @@ public class Tela2EscolhaRobos extends javax.swing.JDialog
                     .addComponent(btnRobo3, javax.swing.GroupLayout.PREFERRED_SIZE, 17, Short.MAX_VALUE)
                     .addComponent(btnRobo4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, Short.MAX_VALUE))
                 .addGap(27, 27, 27)
-                .addComponent(jButton1)
+                .addComponent(btn_votacao)
                 .addGap(22, 22, 22))
         );
 
@@ -199,7 +199,7 @@ public class Tela2EscolhaRobos extends javax.swing.JDialog
         });
         
         // Botão Votação
-        btnVotacao.addActionListener(new ActionListener(){
+        btn_votacao.addActionListener(new ActionListener(){
            @Override
            public void actionPerformed(ActionEvent e){
                NavegacaoController.trocarTela(Tela2EscolhaRobos.this, new Tela4Votacao());
@@ -255,7 +255,7 @@ public class Tela2EscolhaRobos extends javax.swing.JDialog
     private javax.swing.JButton btnRobo2;
     private javax.swing.JButton btnRobo3;
     private javax.swing.JButton btnRobo4;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_votacao;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbl_imgRobo1;
