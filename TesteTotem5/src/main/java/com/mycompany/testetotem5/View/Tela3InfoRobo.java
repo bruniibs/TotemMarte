@@ -1,3 +1,5 @@
+package com.mycompany.testetotem5.View;
+
 import com.mycompany.testetotem5.Controller.NavegacaoController;
 import javax.swing.*;
 
@@ -9,10 +11,12 @@ public class Tela3InfoRobo extends javax.swing.JDialog
     /**
      * Creates new form Tela3InfoRobo
      */
+    
+    private int idRobo; // Qual robo esta sendo exibido (1,2,3,4)
+    
     public Tela3InfoRobo(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        private int idRobo; // Qual robo esta sendo exibido (1,2,3,4)
     }
 
     public Tela3InfoRobo(int idRobo){
