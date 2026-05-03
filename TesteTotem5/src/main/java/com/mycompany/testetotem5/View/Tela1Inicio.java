@@ -1,10 +1,13 @@
 package com.mycompany.testetotem5.View;
 
 import com.mycompany.testetotem5.Controller.NavegacaoController;
-import javax.swing.*;
+import java.awt.Cursor;
+import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.Cursor;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class Tela1Inicio extends javax.swing.JDialog
 {
@@ -23,9 +26,14 @@ public class Tela1Inicio extends javax.swing.JDialog
     public Tela1Inicio(){
         super(new javax.swing.JFrame(), false);
         initComponents();
+        setSize(1280,720);
+        setLocationRelativeTo(null);
         configurarCliqueNaLogo();
+        
+
     }
     
+            
     private void configurarCliqueNaLogo(){
         lbl_logoMars.addMouseListener(new MouseAdapter(){
             @Override
@@ -35,6 +43,7 @@ public class Tela1Inicio extends javax.swing.JDialog
         });
         lbl_logoMars.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,10 +64,17 @@ public class Tela1Inicio extends javax.swing.JDialog
         setResizable(false);
         setSize(new java.awt.Dimension(1280, 720));
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(1280, 720));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1080, 720));
 
         lbl_logoMars.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        lbl_logoMars.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_logoMars.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logoMars.png"))); // NOI18N
+        lbl_logoMars.setLabelFor(jPanel1);
+        lbl_logoMars.setAlignmentY(0.0F);
+        lbl_logoMars.setAutoscrolls(true);
+        lbl_logoMars.setMaximumSize(new java.awt.Dimension(2000, 2000));
+        lbl_logoMars.setMinimumSize(new java.awt.Dimension(2000, 2000));
+        lbl_logoMars.setPreferredSize(new java.awt.Dimension(260, 260));
 
         lbl_Titulo1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         lbl_Titulo1.setText("Exploradores de Marte");
@@ -71,8 +87,8 @@ public class Tela1Inicio extends javax.swing.JDialog
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(155, Short.MAX_VALUE)
-                .addComponent(lbl_logoMars, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(155, 155, 155)
+                .addComponent(lbl_logoMars, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_Titulo1)
@@ -82,26 +98,27 @@ public class Tela1Inicio extends javax.swing.JDialog
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(240, 240, 240)
-                .addComponent(lbl_Titulo1)
-                .addGap(18, 18, 18)
-                .addComponent(lbl_Titulo2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(182, Short.MAX_VALUE)
-                .addComponent(lbl_logoMars, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(170, 170, 170))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(240, 240, 240)
+                        .addComponent(lbl_Titulo1)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbl_Titulo2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(169, 169, 169)
+                        .addComponent(lbl_logoMars, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(183, 183, 183))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1249, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1249, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 612, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 612, Short.MAX_VALUE)
         );
 
         pack();

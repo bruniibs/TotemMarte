@@ -42,6 +42,7 @@ public class Tela3InfoRobo extends javax.swing.JDialog
         jScrollPane1 = new javax.swing.JScrollPane();
         txtInfoRobo = new javax.swing.JTextArea();
         lbl_ImgRobo = new javax.swing.JLabel();
+        btn_votacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -69,6 +70,8 @@ public class Tela3InfoRobo extends javax.swing.JDialog
         lbl_ImgRobo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/robozinhoInho.png"))); // NOI18N
         lbl_ImgRobo.setText("jLabel2");
 
+        btn_votacao.setText("votação");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -76,6 +79,9 @@ public class Tela3InfoRobo extends javax.swing.JDialog
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn_votacao)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_voltar)
@@ -98,6 +104,8 @@ public class Tela3InfoRobo extends javax.swing.JDialog
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(btn_votacao)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
@@ -217,6 +225,7 @@ public class Tela3InfoRobo extends javax.swing.JDialog
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_voltar;
+    private javax.swing.JButton btn_votacao;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
